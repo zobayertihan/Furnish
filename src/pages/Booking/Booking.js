@@ -28,7 +28,7 @@ const Booking = () => {
                             <a
                                 onClick={check}
                                 href="/products"
-                                className="inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-black transition duration-200 rounded shadow-md md:w-auto bg-purple-400 hover:bg-purple-700 focus:shadow-outline focus:outline-none"
+                                className="inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-black transition duration-200 rounded shadow-md md:w-auto bg-gray-400 hover:bg-gray-800 hover:text-white focus:shadow-outline focus:outline-none"
                             >
                                 Book Now
                             </a>

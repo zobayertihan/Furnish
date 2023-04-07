@@ -35,7 +35,7 @@ const Contact = () => {
                         <textarea name="message" id="message" placeholder=" Your Message" className="h-full w-full rounded-md focus:ring focus:ring-opacity-75 focus:ring-violet-400 border-gray-700 text-gray-900m p-5" data-gramm="false" wt-ignore-input="true"></textarea>
                     </div>
                     <div className='flex items-center justify-center'>
-                        <input className='btn btn-primary rounded-md px-5 py-1 bg-gray-700 text-white' type="submit" value="Send" />
+                        <input className='btn btn-primary rounded-md px-5 py-1 text-black bg-gray-400 hover:bg-gray-800 hover:text-white' type="submit" value="Send" />
                     </div>
                 </div>
 

@@ -1,0 +1,79 @@
+#app {
+    height: 100%;
+}
+
+html,
+body {
+    position: relative;
+    height: 100%;
+}
+
+body {
+    background: #eee;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color: #000;
+    margin: 0;
+    padding: 0;
+}
+
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide1 {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+
+    /* Center slide text vertically */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide1 img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@keyframes moon {
+    0% {
+        /* transform: translateX(0%);
+        transform: translateY(0%); */
+        left: 0%;
+        top: 10%;
+    }
+
+    25% {
+        /* transform: translateY(100%); */
+        left: 25%;
+        top: 2%;
+    }
+
+    50% {
+        /* transform: translateY(0%); */
+        left: 50%;
+        top: 10%;
+    }
+
+    75% {
+        /* transform: translateY(100%); */
+        left: 75%;
+        top: 2%;
+    }
+
+    100% {
+        /* transform: translateX(10%);
+        transform: translateY(0%); */
+        left: 94%;
+        top: 10%;
+    }
+}
+
+.animate-moon {
+    animation: moon 7.5s linear infinite;
+}

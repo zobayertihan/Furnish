@@ -1,13 +1,24 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { FaHandHoldingHeart, FaMoneyBill, FaTruck } from 'react-icons/fa';
 import { AiFillCheckCircle } from "react-icons/ai";
 import { TbListDetails } from "react-icons/tb";
 import { MdDesignServices } from "react-icons/md";
 import { RiCustomerService2Fill } from "react-icons/ri";
 import Lottie from 'lottie-web';
+import { Link, useLoaderData } from 'react-router-dom';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import "swiper/css/pagination";
+import "swiper/css/effect-fade";
+import 'swiper/swiper-bundle.min.css';
+import "./../../style.css";
+import { Autoplay, Pagination, EffectFade, Parallax } from "swiper";
+import Banner from '../Banner';
 
 
 const Home = () => {
+    const products = useLoaderData();
+    console.log(products)
     const container = useRef(null);
     useEffect(() => {
         Lottie.loadAnimation({
@@ -23,9 +34,96 @@ const Home = () => {
     }, [])
     return (
         <div className='min-h-screen'>
-            <h1>Slider</h1>
-            <h1>Products</h1>
-            <h1>Offer</h1>
+            <div className='mb-5'>
+                <Swiper
+                    centeredSlides={true}
+                    autoplay={{
+                        delay: 2500,
+                        disableOnInteraction: false,
+                    }}
+                    pagination={true}
+                    parallax={true}
+                    modules={[Pagination, EffectFade, Autoplay, Parallax]}
+                    className="mySwiper1">
+                    <SwiperSlide>
+                        <img className='w-screen md:h-96 h-32 parallax-bg' src="https://i.ibb.co/hfGytF8/b1.webp" alt="" />
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <img className='w-screen md:h-96 h-32 parallax-bg' src="https://i.ibb.co/dg1FdDP/b2.jpg" alt="" />
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <img className='w-screen md:h-96 h-32' src="https://i.ibb.co/Gd72thv/b3.jpg" alt="" />
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <img className='w-screen md:h-96 h-32' src="https://i.ibb.co/LNCJZhq/b4.jpg" alt="" />
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <img className='w-screen md:h-96 h-32' src="https://i.ibb.co/jh0zHD4/b5.jpg" alt="" />
+                    </SwiperSlide>
+                </Swiper>
+
+            </div>
+            <div className='mb-10'>
+                <h1 className='text-center font-bold text-3xl my-2'>Our Products</h1>
+                <p className='text-center my-3'>We promise to deliver the best furniture to you.</p>
+                <Swiper
+                    slidesPerView={1}
+                    spaceBetween={10}
+                    autoplay={{
+                        delay: 2500,
+                        disableOnInteraction: false,
+                    }}
+                    breakpoints={{
+                        640: {
+                            slidesPerView: 2,
+                            spaceBetween: 20,
+                        },
+                        768: {
+                            slidesPerView: 4,
+                            spaceBetween: 40,
+                        },
+                        1024: {
+                            slidesPerView: 5,
+                            spaceBetween: 50,
+                        },
+                    }}
+                    modules={[Autoplay]}
+                    className="mySwiper"
+                >
+                    {
+                        products.map(product =>
+                            <div key={product.id}>
+                                <SwiperSlide>
+                                    <img className='h-32 md:h-64 mx-auto' src={product.image} alt="" />
+                                </SwiperSlide>
+                                {/* <div className='swiper-slide1'>
+                                    <img src={product.image} alt="" />
+                                </div> */}
+                            </div>
+                        )
+                    }
+                </Swiper>
+                <div className='my-2 flex justify-center'>
+                    <Link className='text-center px-5 mt-4 lg:mt-0 py-3 rounded-md border block bg-gray-50 text-gray-900 border-gray-400 font-bold w-1/6' to={'/products'}>See All Products</Link>
+                </div>
+            </div>
+            {/* <div className="p-6 py-12 bg-gradient-to-r from-blue-700 to-yellow-500 dark:text-gray-900">
+                <div className="container mx-auto">
+                    <div className="flex flex-col lg:flex-row items-center justify-between">
+                        <h2 className="text-center text-6xl tracking-tighter font-bold">Ramadan
+                            <br className="sm:hidden" /> Campaign
+                        </h2>
+                        <div className="space-x-2 text-center py-2 lg:py-0">
+                            <span>Free shipping for whole month! Use code:</span>
+                            <span className="font-bold text-lg">RAMADAN</span>
+                        </div>
+                        <Link to='/products' className='px-5 mt-4 lg:mt-0 py-3 rounded-md border block bg-gray-50 text-gray-900 border-gray-400 font-bold' smooth={true} duration={500}>
+                            Products
+                        </Link>
+                    </div>
+                </div>
+            </div> */}
+            <Banner></Banner>
             <div className='bg-gray-100'>
                 <section className="text-gray-800">
                     <div className="container flex flex-col justify-center p-6 mx-auto sm:py-12 lg:py-24 lg:flex-row lg:justify-center">
@@ -49,7 +147,7 @@ const Home = () => {
                 </section>
             </div>
             <div className="bg-gray-100">
-                <h1 className='text-center font-bold m-auto text-black text-2xl'>Our Services</h1>
+                <h1 className='text-center font-bold m-auto text-black text-3xl'>Our Services</h1>
                 <div className="relative px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
                     <div className="absolute inset-x-0 top-0 items-center justify-center hidden overflow-hidden md:flex md:inset-y-0">
                         <svg
@@ -136,7 +234,7 @@ const Home = () => {
                 </div>
             </div>
             <div className="bg-gray-100">
-                <h1 className='text-center m-auto text-black text-2xl font-bold'>Our Focuses</h1>
+                <h1 className='text-center m-auto text-black text-3xl font-bold'>Our Focuses</h1>
                 <div className="relative px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
                     <div className="absolute inset-x-0 top-0 items-center justify-center hidden overflow-hidden md:flex md:inset-y-0">
                         <svg
@@ -262,6 +360,34 @@ const Home = () => {
                     </div>
                 </div>
             </div>
+            <section className="p-6 dark:bg-gray-600 dark:text-gray-100">
+                <div className="container mx-auto grid justify-center grid-cols-2 text-center lg:grid-cols-3">
+                    <div className="flex flex-col justify-start m-2 lg:m-6">
+                        <p className="text-4xl font-bold leading-none lg:text-6xl">50+</p>
+                        <p className="text-sm sm:text-base">Clients</p>
+                    </div>
+                    {/* <div className="flex flex-col justify-start m-2 lg:m-6">
+                        <p className="text-4xl font-bold leading-none lg:text-6xl">89K</p>
+                        <p className="text-sm sm:text-base">Followers on social media</p>
+                    </div> */}
+                    {/* <div className="flex flex-col justify-start m-2 lg:m-6">
+                        <p className="text-4xl font-bold leading-none lg:text-6xl">3</p>
+                        <p className="text-sm sm:text-base">Published books</p>
+                    </div> */}
+                    {/* <div className="flex flex-col justify-start m-2 lg:m-6">
+                        <p className="text-4xl font-bold leading-none lg:text-6xl">8</p>
+                        <p className="text-sm sm:text-base">TED talks</p>
+                    </div> */}
+                    <div className="flex flex-col justify-start m-2 lg:m-6">
+                        <p className="text-4xl font-bold leading-none lg:text-6xl">22</p>
+                        <p className="text-sm sm:text-base">Years of experience</p>
+                    </div>
+                    <div className="flex flex-col justify-start m-2 lg:m-6">
+                        <p className="text-4xl font-bold leading-none lg:text-6xl">10+</p>
+                        <p className="text-sm sm:text-base">Workshops</p>
+                    </div>
+                </div>
+            </section>
         </div>
     );
 };

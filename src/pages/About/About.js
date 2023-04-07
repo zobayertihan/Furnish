@@ -3,7 +3,6 @@ import Lottie from 'lottie-web';
 import stylishfurniture from '../../assets/stylishfurniture.jpg'
 import stylishfurniture2 from '../../assets/stylish2.jpg'
 import stylishfurniture3 from '../../assets/stylish3.jpg'
-import stylishfurniture4 from '../../assets/stylish4.jpg'
 
 const About = () => {
     const container = useRef(null);
@@ -21,9 +20,6 @@ const About = () => {
     }, [])
     return (
         <div className='min-h-screen'>
-            {/* <h1 className='w-3/4 mx-auto font-bold text-2xl text-center mt-5'>At Furnish, we're dedicated to creating beautiful and functional furniture that meets the needs of our customers.</h1>
-            <div ref={container} className='w-1/4 p-5 mx-auto'>
-            </div> */}
             <h1 className='font-bold text-3xl text-center my-10'>About US</h1>
 
             <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
@@ -89,8 +85,7 @@ const About = () => {
                             <a
                                 href="/"
                                 aria-label=""
-                                className="inline-flex items-center font-semibold transition-colors duration-200 text-deep-purple-accent-400 hover:text-deep-purple-800"
-                            >
+                                className="inline-flex items-center font-semibold transition duration-200 text-purple-400 hover:text-purple-800 ease-in-out hover:-translate-y-2">
                                 Explore <span className='font-bold ms-1'>Furnish</span>
                                 <svg
                                     className="inline-block w-3 ml-2"
@@ -125,31 +120,6 @@ const About = () => {
                     </div>
                 </div>
             </div>
-
-            {/* <h1 className='font-bold text-3xl text-center my-10'>Why Us?</h1>
-            <div className='grid grid-cols-3'>
-                <div className='p-5'>
-                    <div className='flex justify-center'>
-                        <FaClock className='text-center my-auto me-2 text-2xl' />
-                        <h1 className='text-center font-bold'>24X7 Customer Service</h1>
-                    </div>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio expedita, nihil nemo veniam omnis doloribus quae dolores temporibus nulla ex accusantium voluptas incidunt, amet facilis eligendi commodi consectetur et voluptatum.</p>
-                </div>
-                <div className='p-5'>
-                    <div className='flex justify-center'>
-                        <FaTruck className='text-center my-auto me-2 text-2xl' />
-                        <h1 className='text-center font-bold'>On Time Delevery</h1>
-                    </div>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil cupiditate expedita sed laboriosam aut omnis ipsam quisquam impedit commodi corrupti veritatis voluptates repudiandae fugit autem, esse magnam earum repellendus amet?</p>
-                </div>
-                <div className='p-5'>
-                    <div className='flex justify-center'>
-                        <FaMoneyBill className='text-center my-auto me-2 text-2xl' />
-                        <h1 className='text-center font-bold'>Minimum Shipping Cost</h1>
-                    </div>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, itaque laborum tempore odit commodi in illum sed, expedita fugit ducimus eveniet explicabo? Delectus asperiores aspernatur magnam vitae quia aperiam alias!</p>
-                </div>
-            </div> */}
         </div>
     );
 };

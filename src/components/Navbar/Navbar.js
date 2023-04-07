@@ -4,6 +4,7 @@ import {
     FaTimes,
 } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
+import logo from '../../assets/logorbg.png'
 
 const Navbar = () => {
     const [nav, setNav] = useState(false);
@@ -41,8 +42,8 @@ const Navbar = () => {
     return (
         <div className='w-full h-[80px] flex justify-between items-center px-4 bg-[#0a192f] text-gray-300'>
             <div>
-                {/* <img src={Logo} alt='Logo' style={{ width: '200px' }} /> */}
-                <h1 className='text-xl font-bold'>Furnish</h1>
+                {/* <img src={logo} alt='Logo' className='w-1/4 bg-white rounded-full' /> */}
+                <h1 className='text-2xl font-bold'>Furnish</h1>
             </div>
 
             {/* menu */}
