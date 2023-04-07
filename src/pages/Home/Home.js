@@ -1,14 +1,53 @@
-import React from 'react';
-import { FaClock, FaHandHoldingHeart, FaMoneyBill, FaTruck } from 'react-icons/fa';
+import React, { useEffect, useRef } from 'react';
+import { FaHandHoldingHeart, FaMoneyBill, FaTruck } from 'react-icons/fa';
 import { AiFillCheckCircle } from "react-icons/ai";
 import { TbListDetails } from "react-icons/tb";
 import { MdDesignServices } from "react-icons/md";
 import { RiCustomerService2Fill } from "react-icons/ri";
+import Lottie from 'lottie-web';
 
 
 const Home = () => {
+    const container = useRef(null);
+    useEffect(() => {
+        Lottie.loadAnimation({
+            container: container.current,
+            renderer: 'svg',
+            loop: true,
+            autoplay: true,
+            animationData: require('../../assets/123726-address.json'),
+        });
+        return () => {
+            Lottie.destroy();
+        };
+    }, [])
     return (
         <div className='min-h-screen'>
+            <h1>Slider</h1>
+            <h1>Products</h1>
+            <h1>Offer</h1>
+            <div className='bg-gray-100'>
+                <section className="text-gray-800">
+                    <div className="container flex flex-col justify-center p-6 mx-auto sm:py-12 lg:py-24 lg:flex-row lg:justify-center">
+                        <div className="flex flex-col justify-center p-6 text-center rounded-sm lg:max-w-md xl:max-w-lg lg:text-left">
+                            <h1 className="text-5xl mb-5 font-bold leading-none sm:text-6xl">
+                                Our Address
+                            </h1>
+                            <p>
+                                Mirpur,Dhaka, Bangladesh
+                            </p>
+                            <p>
+                                Phone: 01XXXXXXXXX
+                            </p>
+                            <p>
+                                Email: Admin_X@gmail.com
+                            </p>
+                        </div>
+                        <div className="flex items-center justify-center p-6 mt-8 lg:mt-0 h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128" ref={container}>
+                        </div>
+                    </div>
+                </section>
+            </div>
             <div className="bg-gray-100">
                 <h1 className='text-center font-bold m-auto text-black text-2xl'>Our Services</h1>
                 <div className="relative px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">

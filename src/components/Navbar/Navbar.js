@@ -21,11 +21,11 @@ const Navbar = () => {
                 Products
             </Link>
         </li>
-        <li className='me-5'>
+        {/* <li className='me-5'>
             <Link to='/booking' className='hover:border-b-2 border-pink-600' smooth={true} duration={500}>
                 Booking
             </Link>
-        </li>
+        </li> */}
         <li className='me-5'>
             <Link to='/about' className='hover:border-b-2 border-pink-600' smooth={true} duration={500}>
                 About
