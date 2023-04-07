@@ -6,20 +6,20 @@ const Contact = () => {
     const form = useRef();
 
     const sendEmail = (e) => {
-        e.preventDefault();
-        const form = e.target;
-        emailjs.sendForm('service_krm90qx', 'template_zevkhv1', form.current, 'WmP-IBcnkmV4h3qy4')
-            .then((result) => {
-                console.log(result.text);
-            }, (error) => {
-                console.log(error.text);
-            });
+        // e.preventDefault();
+        // const form = e.target;
+        // emailjs.sendForm('service_krm90qx', 'template_zevkhv1', form.current, 'WmP-IBcnkmV4h3qy4')
+        //     .then((result) => {
+        //         console.log(result.text);
+        //     }, (error) => {
+        //         console.log(error.text);
+        //     });
         form.reset();
     };
     return (
         <div id='contacts' className='max-w-[1000px] mx-auto my-10 h-screen w-full flex items-center justify-center flex-col bg-gray-300'>
             <h1 className='text-5xl border-b-4 border-gray-700'>Contact</h1>
-            <p className='my-5 text-center font-semibold text-xl'>Send me a email</p>
+            <p className='my-5 text-center font-semibold text-xl'>Send us a email</p>
             <form className="container flex flex-col mx-auto space-y-6 ng-untouched ng-pristine ng-valid" ref={form} onSubmit={sendEmail}>
                 <div className="grid grid-cols-1 gap-10 col-span-full ">
                     <div className="col-span-full w-3/4 mx-auto">
@@ -42,7 +42,7 @@ const Contact = () => {
             </form>
             <div className="divider mt-10">OR</div>
             <div>
-                <p className='p-5 text-center'>Contact me With</p>
+                <p className='p-5 text-center'>Contact us With</p>
                 <p className='text-lg font-semibold text-center'> zobayertihan@gmail.com</p>
             </div>
         </div>
