@@ -37,7 +37,7 @@ const Banner = () => {
                             style={{ fontSize: '1em' }}
                         />
                     </div>
-                    <div className="space-x-2 text-center py-2 lg:py-0 lg:absolute right-48">
+                    <div className="space-x-2 text-center py-2 lg:py-0 lg:absolute md:right-48 xl:right-96">
                         <span>Free shipping for whole month! Use code:</span>
                         <span className="font-bold text-lg">RAMADAN</span>
                     </div>
