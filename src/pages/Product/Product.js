@@ -5,6 +5,7 @@ const Product = () => {
     const products = useLoaderData()
     return (
         <div className='min-h-screen'>
+            <h1 className='text-center font-bold text-xl mb-5'>At Furnish, we're dedicated to creating beautiful and functional furniture that meets the needs of our customers.</h1>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
                 {
                     products.map(product =>

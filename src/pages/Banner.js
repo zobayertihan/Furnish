@@ -28,7 +28,7 @@ const Banner = () => {
                     <div className="text-center text-6xl tracking-tighter font-bold">
                         <TypeAnimation
                             sequence={[
-                                'Ramadan Campaign'
+                                'Ramadan', 1000, 'Ramadan Campaign'
                             ]}
                             wrapper="h1"
                             cursor={false}

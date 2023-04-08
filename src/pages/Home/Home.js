@@ -67,7 +67,7 @@ const Home = () => {
             <div className='mb-10'>
                 <h1 className='text-center font-bold text-3xl my-2'>Our Products</h1>
                 {/* <p className='text-center my-3'>We promise to deliver the best furniture to you.</p> */}
-                <div className='text-center my-3'>
+                <div className='text-center my-3 font-bold'>
                     <TypeAnimation
                         sequence={[
                             'We promise to deliver the best furniture to you.'
