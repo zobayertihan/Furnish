@@ -40,7 +40,7 @@ const Navbar = () => {
     </>
 
     return (
-        <div className='w-full h-[80px] flex justify-between items-center px-4 bg-[#0a192f] text-gray-300'>
+        <div className='w-full h-[80px] flex justify-between items-center px-4 bg-[#0a192f] text-gray-300 z-999'>
             <div>
                 {/* <img src={logo} alt='Logo' className='w-1/4 bg-white rounded-full' /> */}
                 <h1 className='text-2xl font-bold'>Furnish</h1>
@@ -61,7 +61,7 @@ const Navbar = () => {
                 className={
                     !nav
                         ? 'hidden'
-                        : 'absolute top-0 left-0 w-full h-screen bg-[#0a192f] flex flex-col justify-center items-center'
+                        : 'absolute top-0 left-0 w-full h-screen bg-[#0a192f] flex flex-col justify-center items-center z-50'
                 }
             >
                 <li className='py-4 text-2xl'>
@@ -73,12 +73,6 @@ const Navbar = () => {
                     {' '}
                     <Link onClick={handleClick} to='/products' smooth={true} duration={500}>
                         Products
-                    </Link>
-                </li>
-                <li className='py-4 text-2xl'>
-                    {' '}
-                    <Link onClick={handleClick} to='/booking' smooth={true} duration={500}>
-                        Booking
                     </Link>
                 </li>
                 <li className='py-4 text-2xl'>

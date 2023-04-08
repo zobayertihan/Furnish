@@ -113,3 +113,25 @@ body {
     background: linear-gradient(90deg, #151515 0%, rgba(21, 21, 21, 0) 100%);
     z-index: 10;
 }
+
+@media screen and (max-width: 480px) {
+    .swiper-slide-title {
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 1rem;
+        color: #fff;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+    }
+
+    .swiper-slide-sub-title {
+        position: absolute;
+        top: 60%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 0.75rem;
+        color: #fff;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+    }
+}

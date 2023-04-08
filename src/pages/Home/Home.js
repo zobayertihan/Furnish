@@ -49,8 +49,8 @@ const Home = () => {
                     <SwiperSlide>
                         <div className="swiper-slide-content img-rgblayer">
                             <img className='w-screen md:h-96 h-32 parallax-bg' src="https://i.ibb.co/hfGytF8/b1.webp" alt="" />
-                            <div className="swiper-slide-title font-bold z-50" data-title="FURNISH">FURNISH</div>
-                            <div className="swiper-slide-sub-title font-bold z-50">
+                            <div className="swiper-slide-title font-bold z-40" data-title="FURNISH">FURNISH</div>
+                            <div className="swiper-slide-sub-title font-bold z-40">
                                 <TypeAnimation
                                     sequence={[
                                         'Where products meeet quality.'
@@ -67,8 +67,8 @@ const Home = () => {
                     <SwiperSlide>
                         <div className="swiper-slide-content img-rgblayer">
                             <img className='w-screen md:h-96 h-32 parallax-bg' src="https://i.ibb.co/dg1FdDP/b2.jpg" alt="" />
-                            <div className="swiper-slide-title z-50 font-bold" data-title="FURNISH">FURNISH</div>
-                            <div className="swiper-slide-sub-title z-50 font-bold">
+                            <div className="swiper-slide-title z-40 font-bold" data-title="FURNISH">FURNISH</div>
+                            <div className="swiper-slide-sub-title z-40 font-bold">
                                 <TypeAnimation
                                     sequence={[
                                         'Where products meeet quality.'
@@ -85,8 +85,8 @@ const Home = () => {
                     <SwiperSlide>
                         <div className="swiper-slide-content img-rgblayer">
                             <img className='w-screen md:h-96 h-32' src="https://i.ibb.co/Gd72thv/b3.jpg" alt="" />
-                            <div className="swiper-slide-title z-50 font-bold" data-title="FURNISH">FURNISH</div>
-                            <div className="swiper-slide-sub-title z-50 font-bold">
+                            <div className="swiper-slide-title z-40 font-bold" data-title="FURNISH">FURNISH</div>
+                            <div className="swiper-slide-sub-title z-40 font-bold">
                                 <TypeAnimation
                                     sequence={[
                                         'Where products meeet quality.'
@@ -103,8 +103,8 @@ const Home = () => {
                     <SwiperSlide>
                         <div className="swiper-slide-content img-rgblayer">
                             <img className='w-screen md:h-96 h-32' src="https://i.ibb.co/LNCJZhq/b4.jpg" alt="" />
-                            <div className="swiper-slide-title z-50 font-bold" data-title="FURNISH">FURNISH</div>
-                            <div className="swiper-slide-sub-title z-50 font-bold">
+                            <div className="swiper-slide-title z-40 font-bold" data-title="FURNISH">FURNISH</div>
+                            <div className="swiper-slide-sub-title z-40 md:font-bold font-normal">
                                 <TypeAnimation
                                     sequence={[
                                         'Where products meeet quality.'
@@ -121,8 +121,8 @@ const Home = () => {
                     <SwiperSlide>
                         <div className="swiper-slide-content img-rgblayer">
                             <img className='w-screen md:h-96 h-32' src="https://i.ibb.co/jh0zHD4/b5.jpg" alt="" />
-                            <div className="swiper-slide-title font-bold z-50" data-title="FURNISH">FURNISH</div>
-                            <div className="swiper-slide-sub-title font-bold z-50">
+                            <div className="swiper-slide-title font-bold z-40" data-title="FURNISH">FURNISH</div>
+                            <div className="swiper-slide-sub-title font-bold z-40">
                                 <TypeAnimation
                                     sequence={[
                                         'Where products meeet quality.'
@@ -192,7 +192,7 @@ const Home = () => {
                     }
                 </Swiper>
                 <div className='my-2 flex justify-center'>
-                    <Link className='text-center px-5 mt-4 lg:mt-0 py-3 rounded-md border block bg-gray-50 text-gray-900 border-gray-400 font-bold w-1/6' to={'/products'}>See All Products</Link>
+                    <Link className='text-center px-5 mt-4 lg:mt-0 py-3 rounded-md border block bg-gray-50 text-gray-900 border-gray-400 font-bold lg:w-1/6' to={'/products'}>See All Products</Link>
                 </div>
             </div>
             <Banner></Banner>
