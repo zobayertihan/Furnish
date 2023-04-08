@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { toast } from 'react-hot-toast';
 import { useLoaderData } from 'react-router-dom';
 
@@ -10,6 +10,25 @@ const Booking = () => {
             position: 'top-center'
         })
     }
+
+    const [shipping, setShipping] = useState(150);
+    const [promoCode, setPromoCode] = useState('');
+    const [message, setMessage] = useState('');
+
+    function handleApplyPromoCode() {
+        if (promoCode === 'RAMADAN') {
+            setShipping('FREE');
+            setMessage('');
+        } else {
+            setMessage('Invalid promo code');
+            setShipping(150);
+        }
+    }
+
+    function handleChangePromoCode(event) {
+        setPromoCode(event.target.value);
+    }
+
     return (
         <div className='min-h-screen'>
             <div className="relative flex flex-col-reverse py-16 lg:py-0 lg:flex-col mt-10 bg-gray-100">
@@ -24,6 +43,14 @@ const Booking = () => {
                         <p className="mb-5 text-base text-gray-700 md:text-lg md:text-center">
                             Price: {product.price}
                         </p>
+                        <div>
+                            <p className='text-center text-base mb-5'>Shipping: {shipping}</p>
+                            <div className='flex justify-center mb-5'>
+                                <input type="text" value={promoCode} onChange={handleChangePromoCode} placeholder="Enter promo code" />
+                                <button className='rounded px-6 bg-gray-400 hover:bg-gray-800 hover:text-white' onClick={handleApplyPromoCode}>Apply</button>
+                            </div>
+                            <p className='text-center mb-3'>{message}</p>
+                        </div>
                         <div className="mb-10 text-center md:mb-16 lg:mb-20">
                             <a
                                 onClick={check}
