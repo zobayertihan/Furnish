@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import anime from 'animejs';
 import { FaMoon } from 'react-icons/fa';
 import '.././style.css'
+import { TypeAnimation } from 'react-type-animation';
 
 const Banner = () => {
     const moonRef = useRef(null);
@@ -20,10 +21,22 @@ const Banner = () => {
         <div className="relative p-6 py-12 bg-gradient-to-r from-blue-700 to-yellow-500 dark:text-gray-900">
             <div className="container mx-auto">
                 <div className="flex flex-col lg:flex-row items-center justify-between">
-                    <h2 className="text-center text-6xl tracking-tighter font-bold">
+                    {/* <h2 className="text-center text-6xl tracking-tighter font-bold">
                         Ramadan
                         <br className="sm:hidden" /> Campaign
-                    </h2>
+                    </h2> */}
+                    <div className="text-center text-6xl tracking-tighter font-bold">
+                        <TypeAnimation
+                            sequence={[
+                                'Ramadan Campaign'
+                            ]}
+                            wrapper="h1"
+                            cursor={false}
+                            speed={1}
+                            repeat={0}
+                            style={{ fontSize: '1em' }}
+                        />
+                    </div>
                     <div className="space-x-2 text-center py-2 lg:py-0">
                         <span>Free shipping for whole month! Use code:</span>
                         <span className="font-bold text-lg">RAMADAN</span>

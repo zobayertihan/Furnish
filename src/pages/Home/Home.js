@@ -14,6 +14,7 @@ import 'swiper/swiper-bundle.min.css';
 import "./../../style.css";
 import { Autoplay, Pagination, EffectFade, Parallax } from "swiper";
 import Banner from '../Banner';
+import { TypeAnimation } from 'react-type-animation';
 
 
 const Home = () => {
@@ -65,7 +66,19 @@ const Home = () => {
             </div>
             <div className='mb-10'>
                 <h1 className='text-center font-bold text-3xl my-2'>Our Products</h1>
-                <p className='text-center my-3'>We promise to deliver the best furniture to you.</p>
+                {/* <p className='text-center my-3'>We promise to deliver the best furniture to you.</p> */}
+                <div className='text-center my-3'>
+                    <TypeAnimation
+                        sequence={[
+                            'We promise to deliver the best furniture to you.'
+                        ]}
+                        wrapper="h3"
+                        cursor={false}
+                        speed={1}
+                        repeat={0}
+                        style={{ fontSize: '1em' }}
+                    />
+                </div>
                 <Swiper
                     slidesPerView={1}
                     spaceBetween={10}
@@ -366,18 +379,6 @@ const Home = () => {
                         <p className="text-4xl font-bold leading-none lg:text-6xl">50+</p>
                         <p className="text-sm sm:text-base">Clients</p>
                     </div>
-                    {/* <div className="flex flex-col justify-start m-2 lg:m-6">
-                        <p className="text-4xl font-bold leading-none lg:text-6xl">89K</p>
-                        <p className="text-sm sm:text-base">Followers on social media</p>
-                    </div> */}
-                    {/* <div className="flex flex-col justify-start m-2 lg:m-6">
-                        <p className="text-4xl font-bold leading-none lg:text-6xl">3</p>
-                        <p className="text-sm sm:text-base">Published books</p>
-                    </div> */}
-                    {/* <div className="flex flex-col justify-start m-2 lg:m-6">
-                        <p className="text-4xl font-bold leading-none lg:text-6xl">8</p>
-                        <p className="text-sm sm:text-base">TED talks</p>
-                    </div> */}
                     <div className="flex flex-col justify-start m-2 lg:m-6">
                         <p className="text-4xl font-bold leading-none lg:text-6xl">22</p>
                         <p className="text-sm sm:text-base">Years of experience</p>
