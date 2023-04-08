@@ -35,11 +35,11 @@ const Home = () => {
     }, [])
     return (
         <div className='min-h-screen'>
-            <div className='mb-5'>
+            <div className='mb-5 relative'>
                 <Swiper
                     centeredSlides={true}
                     autoplay={{
-                        delay: 2500,
+                        delay: 4000,
                         disableOnInteraction: false,
                     }}
                     pagination={true}
@@ -47,19 +47,94 @@ const Home = () => {
                     modules={[Pagination, EffectFade, Autoplay, Parallax]}
                     className="mySwiper1">
                     <SwiperSlide>
-                        <img className='w-screen md:h-96 h-32 parallax-bg' src="https://i.ibb.co/hfGytF8/b1.webp" alt="" />
+                        <div className="swiper-slide-content img-rgblayer">
+                            <img className='w-screen md:h-96 h-32 parallax-bg' src="https://i.ibb.co/hfGytF8/b1.webp" alt="" />
+                            <div className="swiper-slide-title font-bold z-50" data-title="FURNISH">FURNISH</div>
+                            <div className="swiper-slide-sub-title font-bold z-50">
+                                <TypeAnimation
+                                    sequence={[
+                                        'Where products meeet quality.'
+                                    ]}
+                                    wrapper="h3"
+                                    cursor={false}
+                                    speed={1}
+                                    repeat={0}
+                                    style={{ fontSize: '1em' }}
+                                />
+                            </div>
+                        </div>
                     </SwiperSlide>
                     <SwiperSlide>
-                        <img className='w-screen md:h-96 h-32 parallax-bg' src="https://i.ibb.co/dg1FdDP/b2.jpg" alt="" />
+                        <div className="swiper-slide-content img-rgblayer">
+                            <img className='w-screen md:h-96 h-32 parallax-bg' src="https://i.ibb.co/dg1FdDP/b2.jpg" alt="" />
+                            <div className="swiper-slide-title z-50 font-bold" data-title="FURNISH">FURNISH</div>
+                            <div className="swiper-slide-sub-title z-50 font-bold">
+                                <TypeAnimation
+                                    sequence={[
+                                        'Where products meeet quality.'
+                                    ]}
+                                    wrapper="h3"
+                                    cursor={false}
+                                    speed={1}
+                                    repeat={0}
+                                    style={{ fontSize: '1em' }}
+                                />
+                            </div>
+                        </div>
                     </SwiperSlide>
                     <SwiperSlide>
-                        <img className='w-screen md:h-96 h-32' src="https://i.ibb.co/Gd72thv/b3.jpg" alt="" />
+                        <div className="swiper-slide-content img-rgblayer">
+                            <img className='w-screen md:h-96 h-32' src="https://i.ibb.co/Gd72thv/b3.jpg" alt="" />
+                            <div className="swiper-slide-title z-50 font-bold" data-title="FURNISH">FURNISH</div>
+                            <div className="swiper-slide-sub-title z-50 font-bold">
+                                <TypeAnimation
+                                    sequence={[
+                                        'Where products meeet quality.'
+                                    ]}
+                                    wrapper="h3"
+                                    cursor={false}
+                                    speed={1}
+                                    repeat={0}
+                                    style={{ fontSize: '1em' }}
+                                />
+                            </div>
+                        </div>
                     </SwiperSlide>
                     <SwiperSlide>
-                        <img className='w-screen md:h-96 h-32' src="https://i.ibb.co/LNCJZhq/b4.jpg" alt="" />
+                        <div className="swiper-slide-content img-rgblayer">
+                            <img className='w-screen md:h-96 h-32' src="https://i.ibb.co/LNCJZhq/b4.jpg" alt="" />
+                            <div className="swiper-slide-title z-50 font-bold" data-title="FURNISH">FURNISH</div>
+                            <div className="swiper-slide-sub-title z-50 font-bold">
+                                <TypeAnimation
+                                    sequence={[
+                                        'Where products meeet quality.'
+                                    ]}
+                                    wrapper="h3"
+                                    cursor={false}
+                                    speed={1}
+                                    repeat={0}
+                                    style={{ fontSize: '1em' }}
+                                />
+                            </div>
+                        </div>
                     </SwiperSlide>
                     <SwiperSlide>
-                        <img className='w-screen md:h-96 h-32' src="https://i.ibb.co/jh0zHD4/b5.jpg" alt="" />
+                        <div className="swiper-slide-content img-rgblayer">
+                            <img className='w-screen md:h-96 h-32' src="https://i.ibb.co/jh0zHD4/b5.jpg" alt="" />
+                            <div className="swiper-slide-title font-bold z-50" data-title="FURNISH">FURNISH</div>
+                            <div className="swiper-slide-sub-title font-bold z-50">
+                                <TypeAnimation
+                                    sequence={[
+                                        'Where products meeet quality.'
+                                    ]}
+                                    wrapper="h3"
+                                    cursor={false}
+                                    speed={1}
+                                    repeat={0}
+                                    style={{ fontSize: '1em' }}
+                                />
+                            </div>
+                        </div>
                     </SwiperSlide>
                 </Swiper>
 
@@ -120,22 +195,6 @@ const Home = () => {
                     <Link className='text-center px-5 mt-4 lg:mt-0 py-3 rounded-md border block bg-gray-50 text-gray-900 border-gray-400 font-bold w-1/6' to={'/products'}>See All Products</Link>
                 </div>
             </div>
-            {/* <div className="p-6 py-12 bg-gradient-to-r from-blue-700 to-yellow-500 dark:text-gray-900">
-                <div className="container mx-auto">
-                    <div className="flex flex-col lg:flex-row items-center justify-between">
-                        <h2 className="text-center text-6xl tracking-tighter font-bold">Ramadan
-                            <br className="sm:hidden" /> Campaign
-                        </h2>
-                        <div className="space-x-2 text-center py-2 lg:py-0">
-                            <span>Free shipping for whole month! Use code:</span>
-                            <span className="font-bold text-lg">RAMADAN</span>
-                        </div>
-                        <Link to='/products' className='px-5 mt-4 lg:mt-0 py-3 rounded-md border block bg-gray-50 text-gray-900 border-gray-400 font-bold' smooth={true} duration={500}>
-                            Products
-                        </Link>
-                    </div>
-                </div>
-            </div> */}
             <Banner></Banner>
             <div className='bg-gray-100'>
                 <section className="text-gray-800">
