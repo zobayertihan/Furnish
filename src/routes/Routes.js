@@ -16,7 +16,7 @@ export const router = createBrowserRouter([
             {
                 path: '/',
                 element: <Home></Home>,
-                loader: () => fetch(`http://localhost:5000/products`)
+                loader: () => fetch(`https://furnish-server.vercel.app/products`)
             },
             // {
             //     path: '/booking',
@@ -42,19 +42,19 @@ export const router = createBrowserRouter([
                     {
                         path: '/products',
                         element: <Product></Product>,
-                        loader: () => fetch(`http://localhost:5000/products`)
+                        loader: () => fetch(`https://furnish-server.vercel.app/products`)
                     },
                     {
                         path: '/catagories/:id',
                         element: <Product></Product>,
-                        loader: ({ params }) => fetch(`http://localhost:5000/catagories/${params.id}`)
+                        loader: ({ params }) => fetch(`https://furnish-server.vercel.app/catagories/${params.id}`)
                     }
                 ]
             },
             {
                 path: '/products/:id/booking',
                 element: <Booking></Booking>,
-                loader: ({ params }) => fetch(`http://localhost:5000/products/${params.id}`)
+                loader: ({ params }) => fetch(`https://furnish-server.vercel.app/products/${params.id}`)
 
             },
         ]

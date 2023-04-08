@@ -28,16 +28,16 @@ const Banner = () => {
                     <div className="text-center text-6xl tracking-tighter font-bold">
                         <TypeAnimation
                             sequence={[
-                                'Ramadan', 1000, 'Ramadan Campaign'
+                                'Ramadan Campaign', 1000, 'Ramadan', 1000, 'R'
                             ]}
                             wrapper="h1"
                             cursor={false}
                             speed={1}
-                            repeat={0}
+                            repeat={Infinity}
                             style={{ fontSize: '1em' }}
                         />
                     </div>
-                    <div className="space-x-2 text-center py-2 lg:py-0">
+                    <div className="space-x-2 text-center py-2 lg:py-0 absolute right-48">
                         <span>Free shipping for whole month! Use code:</span>
                         <span className="font-bold text-lg">RAMADAN</span>
                     </div>
